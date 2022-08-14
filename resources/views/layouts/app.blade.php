@@ -69,6 +69,9 @@
                     <a href="{{ route('supplierledger.index') }}" class="list-group-item d-flex justify-content-between align-items-center {{ (request()->is('Supplier*')) ? 'active' : '' }}">Supplier Ledger
                         <span class="badge badge-pill ml-5 {{ (request()->is('Supplier*')) ? 'bg-danger' : 'bg-primary' }}">0</span>
                     </a>
+                    <a href="{{ route('customerledger.index') }}" class="list-group-item d-flex justify-content-between align-items-center {{ (request()->is('Customer*')) ? 'active' : '' }}">Customer Ledger
+                        <span class="badge badge-pill ml-5 {{ (request()->is('Customer*')) ? 'bg-danger' : 'bg-primary' }}">0</span>
+                    </a>
                     <a href="{{ route('sales.index') }}" class="list-group-item d-flex justify-content-between align-items-center {{ (request()->is('sales*')) ? 'active' : '' }}">Sales
                         <span class="badge badge-pill ml-5 {{ (request()->is('sales*')) ? 'bg-danger' : 'bg-primary' }}">0</span>
                     </a>

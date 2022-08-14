@@ -67,6 +67,12 @@ Route::get('/sales/add', [App\Http\Controllers\SaleController::class, 'create'])
 Route::post('/sales/save', [App\Http\Controllers\SaleController::class, 'store'])->name('sales.store');
 Route::get('/sales/edit/{id}', [App\Http\Controllers\SaleController::class, 'edit'])->name('sales.edit');
 Route::post('/sales/update/{id}', [App\Http\Controllers\SaleController::class, 'update'])->name('sales.update');
+Route::post('/sales/complete/{id}', [App\Http\Controllers\SaleController::class, 'completeSales'])->name('sales.complete');
+Route::get('/sales/bill/{id}', [App\Http\Controllers\SaleController::class, 'showBill'])->name('sales.bill');
 
 Route::get('/salesorder/create/{id}', [App\Http\Controllers\SaleOrderController::class, 'create'])->name('salesorder.create');
 Route::post('/salesorder/save/{id}', [App\Http\Controllers\SaleOrderController::class, 'store'])->name('salesorder.save');
+Route::get('/salesorder/delete/{id}', [App\Http\Controllers\SaleOrderController::class, 'destroy'])->name('salesorder.delete');
+
+Route::get('/Customer/ledger/index', [App\Http\Controllers\CustomerLedgerController::class, 'index'])->name('customerledger.index');
+Route::post('/Customer/ledger', [App\Http\Controllers\CustomerLedgerController::class, 'show'])->name('customerledger.ledger');

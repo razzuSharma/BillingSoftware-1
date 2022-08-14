@@ -27,8 +27,8 @@
                     <option value="Credit">Credit</option>
                 </select>
             </div>
-            <div class="col-md-4 mt-2">
-                <input type="submit" value="NEXT" class="btn btn-md btn-primary">
+            <div class="col-md-12 mt-2">
+                <center><input type="submit" value="NEXT" class="btn btn-md btn-primary"></center>
             </div>
         </form>
     </div>

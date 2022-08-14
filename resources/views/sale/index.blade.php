@@ -39,7 +39,11 @@
                                 <td>{{ Auth::user()->name }}</td>
                                 <td>
                                     <a href="{{ route('sales.edit', ['id'=>$sale->id]) }}" class="btn btn-primary btn-sm">Edit</a>
-                                    <a href="" class="btn btn-primary btn-sm">Statement</a>
+                                    @if ($sale->status == 'Completed')
+                                        <a href="{{ route('sales.bill', ['id'=>$sale->id]) }}" class="btn btn-primary btn-sm">Bill</a>
+                                    @else
+                                    <a href="{{ route('salesorder.create', ['id'=>$sale->id]) }}" class="btn btn-primary btn-sm">Contd.</a>
+                                    @endif
                                 </td>
                             </tr>
                         @endforeach
